@@ -1,0 +1,57 @@
+body{
+	background-color: #292929;
+	color: white;
+}
+
+.head-box{
+	margin-top: 50px;
+}
+
+.box{
+	background-color : black;
+	border: 0px;
+	border-radius: 2px;
+
+	padding: 10px;
+}
+
+.left{
+	border-right: 12px #674ea7 solid;
+
+	position: relative;
+	left: 6px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.right{
+	border-left: 12px #674ea7 solid;
+
+	position: relative;
+	right: 6px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* cutoff for bootstrap col-sm is >= 768px*/
+@media (max-width: 767px){
+	.left{
+		border-right: 12px #674ea7 solid;
+		border-left: 0px;
+		
+		position: static;
+	}
+
+	.right{
+		border-right: 12px #674ea7 solid;
+		border-left: 0px;
+
+		position: static;
+	}
+}
+
+.first{
+	padding-top: 30px;
+}
