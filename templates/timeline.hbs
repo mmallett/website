@@ -1,0 +1,42 @@
+<!-- <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 left first">
+  <div class="box callout-right">
+    <h2>Software Engineer @IBM</h2>
+    <p>some content content content content</p>
+  </div>
+</div>
+
+<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-6 right">
+  <div class="box callout-left">
+    <h2>Created Repo website</h2>
+    <p>some content content content content</p>
+  </div>
+</div>
+
+<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 left">
+  <div class="box callout-right">
+    <h2>New Blog Javasaur</h2>
+    <p>some content content content content</p>
+  </div>
+</div>
+
+<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-6 right">
+  <div class="box callout-left">
+    <h2>Graduated from Iowa State University</h2>
+    <p>some content content content content</p>
+  </div>
+</div> -->
+
+{{#each items}}
+
+<div class="{{tlGetPositionClasses @index}}">
+  <div class="box {{tlGetCalloutClass @index}}">
+    <img class="tl-icon" src="{{icon}}"></img>
+    <div style="margin-left:60px">
+      <p style="margin-top:0px;margin-bottom:0px">{{date}}</p>
+      <h2 style="margin-top:10px;margin-bottom:10px">{{title}}</h2>
+      <p>{{subtext}}</p>
+    </div>
+  </div>
+</div>
+
+{{/each}}

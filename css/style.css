@@ -16,7 +16,9 @@ body{
 
 	padding: 10px;
 
-	min-height: 70px
+	min-height: 70px;
+
+	cursor: pointer;
 }
 
 .left{
@@ -39,6 +41,13 @@ body{
 	padding-bottom: 10px;
 }
 
+.left .box:hover{
+	border-left: 5px #674ea7 solid;
+}
+.right .box:hover{
+	border-right: 5px #674ea7 solid;	
+}
+
 /* cutoff for bootstrap col-sm is >= 768px*/
 @media (max-width: 767px){
 	.left{
@@ -55,6 +64,11 @@ body{
 
 		position: relative;
 		right: 0px;
+	}
+	
+	.right .box:hover{
+		border-left: 5px #674ea7 solid;	
+		border-right: 0px;
 	}
 }
 
@@ -131,6 +145,12 @@ body{
 		border-bottom: 0px;
 	}
 
+}
+
+.tl-icon{
+	width: 60px;
+	float: left;
+	padding-right: 10px;
 }
 
 .circle-right::after{
