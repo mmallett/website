@@ -58,7 +58,8 @@ function doStaticData(){
 		{
 			title: 'The javasaur is born!',
 			date: '2014-07-11',
-			subtext: "I've finally fulfilled my lifelong dream of starting a blog.",			link: 'http://javasaur.blogspot.com',
+			subtext: "I've finally fulfilled my lifelong dream of starting a blog.",
+			link: 'http://javasaur.blogspot.com',
 			icon: 'img/javasaur.png'
 		}
 	]
@@ -72,19 +73,20 @@ function doStaticData(){
 
 function doBlogger(){
 
-	$.get('http://javasaur.blogspot.com/feeds/posts/default', function(data){
+	$.get('proxy/blogspot', function(data){
 
 		$(data).find('entry').each(function(){
 			var el = $(this);
 
 			var title = el.find('title').text();
-			var link = el.find('link[rel=alternate]').text();
+			var link = el.find('link[rel="alternate"]').attr('href');
 			var date = el.find('published').text();
 
 			timeline.items.push({
 				title: title,
 				date: date,
 				subtext: '',
+				link: link,
 				icon: 'img/javasaur.png'
 			});
 
@@ -100,7 +102,7 @@ function doBlogger(){
 
 function dataSourceComplete(){
 
-	if(githubDone){
+	if(githubDone && bloggerDone){
 
 		timeline.items.sort(function(a, b){
 			var keyA = new Date(a.date);
