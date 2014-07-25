@@ -9,7 +9,13 @@ sudo apt-get update
 sudo apt-get install -y apache2
 rm -rf /var/www
 ln -fs /vagrant /var/www
+
+sudo cp config/000-default /etc/apache2/sites-enabled/000-default
+sudo a2enmod proxy_http
+sudo service apache2 restart
+
 sudo apt-get install -y git 
+sudo apt-get install -y vim
 SCRIPT
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
