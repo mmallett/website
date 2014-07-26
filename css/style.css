@@ -1,3 +1,9 @@
+/*
+head/tl #214e63 main color
+boxes #23757A
+background #183A49
+*/
+
 body{
 	background-color: #292929;
 	color: white;
@@ -7,13 +13,18 @@ body{
 	/*min-height: 200px;*/
 	background-color: #674ea7;
 	color: black;
+	padding: 10px;
 }
 .head-box div.col-xs-10{
 	text-align: center;
 }
 .head-box img{
 	width: 100%;
-	margin: 10px;
+}
+
+#info{
+	text-align:left;
+	padding: 10px;
 }
 
 .box{

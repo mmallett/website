@@ -1,9 +1,17 @@
 var timeline = {items:[]};
 
 var githubDone = false,
-	bloggerDone = false;
+	bloggerDone = false,
+	linkedinDone = false;
 
 $(document).ready(function(){
+
+	$('#info').hide();
+
+	$('.head-box button').click(function(){
+		$('#info').slideToggle();
+		$('.head-box button span').toggleClass('glyphicon-chevron-up glyphicon-chevron-down');
+	});
 
 	hbUtils.init();
 
@@ -12,6 +20,8 @@ $(document).ready(function(){
 	doGithub();
 
 	doBlogger();
+
+	doLinkedin();
 	
 });
 
@@ -100,9 +110,66 @@ function doBlogger(){
 
 }
 
+function doLinkedin(){
+
+	var linkedinLink = 'http://www.linkedin.com/in/mathewmallett';
+
+	$.get('proxy/linkedin', function(data){
+
+		$(data).find('div.experience').each(function(){
+			var el = $(this);
+
+			var title = el.find('span.title').text() + 
+						' @ ' + el.find('span.org').text();
+			var description = el.find('p.description').text();
+			var date = el.find('abbr.dtstart').text();
+
+			timeline.items.push({
+				title: title,
+				date: date,
+				subtext: description,
+				link: linkedinLink,
+				icon: 'http://www.arcogent.com/wp-content/uploads/2012/12/transparent-Linkedin-logo-icon.png'
+			});
+
+		});
+		$(data).find('div.education').each(function(){
+			var el = $(this);
+
+			var school = el.find('a').text();
+			var description = el.find('span.degree').text() +
+							' in ' + el.find('span.major').text();
+			var start = el.find('abbr.dtstart').text();
+			var end = el.find('abbr.dtend').text();
+
+			timeline.items.push({
+				title: 'Started @ ' + school,
+				date: start,
+				subtext: description,
+				link: linkedinLink,
+				icon: 'http://www.arcogent.com/wp-content/uploads/2012/12/transparent-Linkedin-logo-icon.png'
+			});
+
+			timeline.items.push({
+				title: 'Graduated from ' + school,
+				date: end,
+				subtext: description,
+				link: linkedinLink,
+				icon: 'http://www.arcogent.com/wp-content/uploads/2012/12/transparent-Linkedin-logo-icon.png'
+			});
+		});
+
+		linkedinDone = true;
+
+		dataSourceComplete();
+
+
+	});
+}
+
 function dataSourceComplete(){
 
-	if(githubDone && bloggerDone){
+	if(githubDone && bloggerDone && linkedinDone){
 
 		timeline.items.sort(function(a, b){
 			var keyA = new Date(a.date);
