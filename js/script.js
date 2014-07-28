@@ -13,7 +13,7 @@ $(document).ready(function(){
 		$('.head-box button span').toggleClass('glyphicon-chevron-up glyphicon-chevron-down');
 	});
 
-	$('.top-spacer').height($('.head-box').height() + 50);
+	$('.top-spacer').height($('.head-box').height() + 40);
 
 	hbUtils.init();
 
