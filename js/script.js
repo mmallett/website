@@ -13,6 +13,8 @@ $(document).ready(function(){
 		$('.head-box button span').toggleClass('glyphicon-chevron-up glyphicon-chevron-down');
 	});
 
+	$('.top-spacer').height($('.head-box').height() + 50);
+
 	hbUtils.init();
 
 	doStaticData();
@@ -68,7 +70,7 @@ function doStaticData(){
 		{
 			title: 'The javasaur is born!',
 			date: '2014-07-11',
-			subtext: "I've finally fulfilled my lifelong dream of starting a blog.",
+			subtext: "I've finally fulfilled my lifelong dream of starting a blog. </sarcasm>",
 			link: 'http://javasaur.blogspot.com',
 			icon: 'img/javasaur.png'
 		}

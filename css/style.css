@@ -2,18 +2,40 @@
 head/tl #214e63 main color
 boxes #23757A
 background #183A49
+
+midnight blue 003366
+coordinating grey 2c2c2c
+analogous more green 066e7d
+analogous more blue 06307d
+shade darker 004673
+shade darker still 002f4c
+shade lighter 006eb2
+shade lighter lighter 0095f2
+monochrome < 265d74
+monochrome << 006eb2
+monochrome > 3682b2
 */
 
 body{
-	background-color: #292929;
+	background-color: black;
 	color: white;
+	
+	/*background-image:url("http://p1.pichost.me/i/41/1642961.jpg");*/
+	background-image:url("http://gimpforums.com/attachment.php?aid=1408");
+	background-attachment: fixed;
+	background-position: center center;
 }
 
 .head-box{
 	/*min-height: 200px;*/
-	background-color: #674ea7;
-	color: black;
+	/*background-color: #674ea7;*/
+	background-color: rgba(0,0,0,.5);
+	color: white;
 	padding: 10px;
+
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 }
 .head-box div.col-xs-10{
 	text-align: center;
@@ -21,16 +43,21 @@ body{
 .head-box img{
 	width: 100%;
 }
+.head-box button{
+	background: transparent;
+	border: 0px;
+}
 
 #info{
 	text-align:left;
-	padding: 10px;
+	padding: 20px;
 }
 
 .box{
-	background-color : black;
+	/*background-color : black;*/
+	background-color: rgba(0,0,0,.3);
 	border: 0px;
-	border-radius: 2px;
+	border-radius: 10px;
 
 	padding: 10px;
 
@@ -40,7 +67,7 @@ body{
 }
 
 .left{
-	border-right: 12px #674ea7 solid;
+	border-right: 12px rgba(0,0,0,.5) solid;
 
 	position: relative;
 	left: 6px;
@@ -50,7 +77,7 @@ body{
 }
 
 .right{
-	border-left: 12px #674ea7 solid;
+	border-left: 12px rgba(0,0,0,.5) solid;
 
 	position: relative;
 	right: 6px;
@@ -59,17 +86,17 @@ body{
 	padding-bottom: 10px;
 }
 
-.left .box:hover{
-	border-left: 5px #674ea7 solid;
+.box:hover{
+	border-bottom: 5px rgba(0,0,0,.5) solid;
 }
-.right .box:hover{
+/*.right .box:hover{
 	border-right: 5px #674ea7 solid;	
-}
+}*/
 
 /* cutoff for bootstrap col-sm is >= 768px*/
 @media (max-width: 767px){
 	.left{
-		border-right: 12px #674ea7 solid;
+		border-right: 12px rgba(0,0,0,.5) solid;
 		border-left: 0px;
 		
 		position: relative;
@@ -77,26 +104,26 @@ body{
 	}
 
 	.right{
-		border-right: 12px #674ea7 solid;
+		border-right: 12px rgba(0,0,0,.5) solid;
 		border-left: 0px;
 
 		position: relative;
 		right: 0px;
 	}
 	
-	.right .box:hover{
+	/*.right .box:hover{
 		border-left: 5px #674ea7 solid;	
 		border-right: 0px;
-	}
+	}*/
 }
 
 .first{
-	padding-top: 30px;
+	/*padding-top: 30px;*/
 }
 
 .callout-right::after{
 	content:"";
-	border-left: 10px black solid;
+	border-left: 10px rgba(0,0,0,.3) solid;
 	border-right: 0px;
 	border-top: 10px transparent solid;
 	border-bottom: 10px transparent solid;
@@ -111,7 +138,7 @@ body{
 }
 .callout-left::before{
 	content:"";
-	border-right: 10px black solid;
+	border-right: 10px rgba(0,0,0,.3) solid;
 	border-left: 0px;
 	border-top: 10px transparent solid;
 	border-bottom: 10px transparent solid;
@@ -128,7 +155,7 @@ body{
 
 	.callout-right::after{
 		content:"";
-		border-left: 10px black solid;
+		border-left: 10px rgba(0,0,0,.3) solid;
 		border-right: 0px;
 		border-top: 10px transparent solid;
 		border-bottom: 10px transparent solid;
@@ -144,7 +171,7 @@ body{
 	.callout-left::after{
 		content:"";
 		border-right: 0px;
-		border-left: 10px black solid;
+		border-left: 10px rgba(0,0,0,.3) solid;
 		border-top: 10px transparent solid;
 		border-bottom: 10px transparent solid;
 		margin: 0px;
@@ -169,6 +196,39 @@ body{
 	width: 60px;
 	float: left;
 	padding-right: 10px;
+}
+
+.top-spacer{
+
+}
+.first::after{
+	content:"";
+	border-left: 20px transparent solid; 
+	border-right: 20px transparent solid;
+	border-top: 0px;
+	border-bottom: 20px rgba(0,0,0,.5) solid;
+	margin: 0px;
+	padding: 0px;
+	width: 0px;
+	height: 0px;
+
+	position: absolute;
+	left: 97.2%;
+	bottom:100%;
+}
+
+.foot-box{
+	/*min-height: 200px;*/
+	/*background-color: #674ea7;*/
+	background-color: rgba(0,0,0,.5);
+	color: white;
+	padding: 10px;
+
+	width: 100%;
+
+	min-height: 40px;
+
+	text-align: center;
 }
 
 .circle-right::after{
