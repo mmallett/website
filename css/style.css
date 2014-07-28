@@ -46,6 +46,7 @@ body{
 .head-box button{
 	background: transparent;
 	border: 0px;
+	outline: none;
 }
 
 #info{
