@@ -14,6 +14,10 @@ shade lighter lighter 0095f2
 monochrome < 265d74
 monochrome << 006eb2
 monochrome > 3682b2
+
+perfect triangle placement
+left .first.width() - 26
+need to add onload to find it and modify class
 */
 
 body{
@@ -29,7 +33,7 @@ body{
 .head-box{
 	/*min-height: 200px;*/
 	/*background-color: #674ea7;*/
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.7);
 	color: white;
 	padding: 10px;
 
@@ -216,6 +220,10 @@ body{
 	position: absolute;
 	left: 97.2%;
 	bottom:100%;
+}
+@media (max-width: 767px){
+	position: absolute;
+	left: 95.9%;
 }
 
 .foot-box{
