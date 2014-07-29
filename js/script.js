@@ -114,6 +114,13 @@ function doBlogger(){
 
 function doLinkedin(){
 
+	/*
+	fuck you linkedin
+	(blocks my proxied requests in production)
+
+	need to add linkedin api connector backend now...
+	*/
+/*
 	var linkedinLink = 'http://www.linkedin.com/in/mathewmallett';
 
 	$.get('proxy/linkedin', function(data){
@@ -161,12 +168,14 @@ function doLinkedin(){
 			});
 		});
 
+		linkedinProxyBlocked();*/
+
 		linkedinDone = true;
 
 		dataSourceComplete();
 
 
-	});
+	// });
 }
 
 function dataSourceComplete(){
