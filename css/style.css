@@ -59,6 +59,17 @@ body{
 	/*overflow: scroll;*/
 }
 
+#social{
+	text-align: right;
+}
+#social a{
+	display: inline;
+}
+#social img{
+	width: 20px;
+	display: inline;
+}
+
 .box{
 	/*background-color : black;*/
 	background-color: rgba(0,0,0,.3);
