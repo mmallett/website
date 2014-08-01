@@ -133,7 +133,7 @@ function doBlogger(){
 
 function doLinkedin(){
 
-	var linkedinLink = 'http://linkedin.com/in/mathewmallet';
+	var linkedinLink = 'http://linkedin.com/in/mathewmallett';
 	var linkedinIcon = 'http://www.arcogent.com/wp-content/uploads/2012/12/transparent-Linkedin-logo-icon.png';
 
 	var linkedinApiUrl = 'proxy/linkedin';
