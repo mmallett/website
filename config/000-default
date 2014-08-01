@@ -2,7 +2,8 @@
 	ServerAdmin webmaster@localhost
 
 	ProxyPass /proxy/blogspot http://javasaur.blogspot.com/feeds/posts/default
-	ProxyPass /proxy/linkedin http://www.linkedin.com/in/mathewmallett
+
+	ProxyPass /proxy/linkedin http://localhost:8888/linkedin
 
 	DocumentRoot /var/www
 	<Directory />

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matt Mallett</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="head-box">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-xs-10 col-xs-offset-1">
+            <!-- <h1>Matt Mallett</h1> -->
+            <a href="/"><img src="img/title-font.png"></src></a>
+          </div>
+
+        </div>
+        <div class="row">
+          
+          <div class="col-xs-4 col-xs-offset-1">
+            <button type="button">Info <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+          </div>
+
+          <!-- <div class="col-xs-4">
+          </div> -->
+
+          <div id="social" class="col-xs-6">
+            <a href="http://twitter.com/_mattmallett"><img src="img/twitter.png"></img></a>
+            <a href="http://github.com/mmallett"><img src="img/github1.png"></img></a>
+            <a href="http://linkedin.com/in/mathewmallett"><img src="img/linkedin.png"></img></a>
+            <a href="http://javasaur.blogspot.com"><img src="img/blogger.png"></a>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div id="info" class="col-xs-10 col-xs-offset-1">
+            <p>I'm a Software Engineer at IBM Somers near New York City. My current focuses are on cloud native and massively scalable applications, but I have been experimenting in mobile and front-end development as well.</p>
+
+
+            <p>This site is custom built by me using only HTML, CSS, and Javascript. It is a timeline of some (not nearly all) of the events in my career. The entire logic of this timeline is viewable from the source on this page, or from <a href="https://www.github.com/mmallett/website">the github repo</a>.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="top-spacer">
+    </div>
+
+    <div class="container">
+
+      <div class="col-xs-10 col-xs-offset-1 project-box">
+        <h2>CprE 288 - Mars Rover</h2>
+        <iframe class="video"src="//www.youtube.com/embed/Mke0oAifLBc" frameborder="0" allowfullscreen></iframe>
+        <p>This was the final project for an Embedded Systems course, where we had been spending the semester working with the robots you can see above. The robots are equipped with infrared and SONAR sensors, front bump sensors, and drop sensors. We were tasked with created a C program that would allow us to control the robot from a remote terminal. We had to create our own list of instructions like move, turn, scan that would be sent from our terminal to the robot via bluetooth. The robot then had to interpret these commands and perform them. The challenge was to navigate the field of "asteroids" to find the pick up zone without hitting anything. Our team came up with a creative solution to this: using polar coordinate math, we rendered an ASCII map of the area after the robot had scanned, and sent it back to the terminal. We took it one step further and fully automated the process. All we had to do was turn on the robot and it would navigate the field.</p>
+        <p>I loved this project. It was the first major group project I had worked on at Iowa State, and gave me great team experience. Everyone worked very well together and we easily met our deadline. We were so far ahead of schedule that we had about a full week to work on automation. This is a great example of how Iowa State is making it fun to work on your projects. When I had free time during this semester, I would usually head into the lab and try to push the limits of the robot. The result was that our team had the fastest time to goal for that year.</p>
+        <p>My contribution</p>
+        <ul>
+          <li>Automation Logic</li>
+          <li>Simple command interface to pass messages to robot</li>
+          <li>Parser for the command interface</li>
+        </ul>
+        <p>Relevant skills learned</p>
+        <ul><li>Embedded level C programming</li>
+        <li>Applied math (polar coordinate mapping and calculations for SONAR)</li>
+        <li>Logic to automate a process</li>
+        <li>How to divide up tasks in a team environment to reach a goal quickly</li></ul>
+
+        <a class="back" href="/"><span class="glyphicon glyphicon-chevron-left"></span> Back</a>
+
+      </div>
+
+    </div>
+
+    <div class="foot-box">
+      &copy Matt Mallett 2014
+    </div>
+    
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/handlebars-v1.3.0.js"></script> -->
+    <script src="js/style.js"></script>
+  </body>
+</html>
